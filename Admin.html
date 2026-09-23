@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1"
+>
+
+<title>Our Vibe — Admin</title>
+
+<link
+  rel="stylesheet"
+  href="admin.css"
+>
+
+</head>
+
+
+<body>
+
+<main>
+
+<h1>Our Vibe — Admin</h1>
+
+<p class="note">
+
+This is a local editable prototype.
+For a public QR site, the admin data should be
+connected to a small hosted database/storage layer.
+
+</p>
+
+
+<section>
+
+<h2>Add song</h2>
+
+<input
+  id="title"
+  placeholder="Song title"
+>
+
+<input
+  id="artist"
+  placeholder="Artist"
+>
+
+<input
+  id="url"
+  placeholder="YouTube URL"
+>
+
+<input
+  id="image"
+  placeholder="Thumbnail image URL (optional)"
+>
+
+<input
+  id="vibes"
+  placeholder="Vibes, comma separated: romantic,warm,calm"
+>
+
+<button onclick="addSong()">
+Add song
+</button>
+
+</section>
+
+
+
+<section>
+
+<h2>Add photo</h2>
+
+<input
+  id="photo"
+  placeholder="Public image URL"
+>
+
+<button onclick="addPhoto()">
+Add photo
+</button>
+
+</section>
+
+
+
+<section>
+
+<h2>Songs</h2>
+
+<div id="songs"></div>
+
+</section>
+
+
+
+<section>
+
+<h2>Photos</h2>
+
+<div id="photos"></div>
+
+</section>
+
+
+
+<button
+  class="danger"
+  onclick="resetHistory()"
+>
+
+Reset today's song history
+
+</button>
+
+
+<script src="admin.js"></script>
+
+</main>
+
+</body>
+
+</html>
