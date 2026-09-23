@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+  background: #0d0d0f;
+  color: #f5f2ed;
+}
+
+body {
+  min-height: 100svh;
+}
+
+.app {
+  min-height: 100svh;
+  max-width: 520px;
+  margin: auto;
+  padding: 22px 18px 34px;
+  position: relative;
+}
+
+.screen {
+  display: none;
+  min-height: calc(100svh - 56px);
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  margin: 4px 0 18px;
+}
+
+.tiny {
+  font-size: 11px;
+  letter-spacing: 4px;
+  opacity: .55;
+}
+
+.camera-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 55svh;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #17171a;
+  border: 1px solid #2b2b30;
+}
+
+.camera-wrap video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+.camera-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 26px;
+  text-align: center;
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.7)
+  );
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.primary,
+.ghost {
+  width: 100%;
+  border-radius: 999px;
+  padding: 16px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.primary {
+  border: 0;
+  background: #f5f2ed;
+  color: #111;
+}
+
+.ghost {
+  background: transparent;
+  color: #f5f2ed;
+  border: 1px solid #3b3b42;
+}
+
+.msg {
+  text-align: center;
+  font-size: 12px;
+  opacity: .65;
+  min-height: 18px;
+}
+
+.result-card {
+  margin: auto 0;
+  text-align: center;
+}
+
+.vibe {
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: .72;
+  margin-bottom: 18px;
+}
+
+.art {
+  width: min(70vw,300px);
+  aspect-ratio: 1;
+  margin: auto;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #25252b,
+    #121216
+  );
+  background-size: cover;
+  background-position: center;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  opacity: .5;
+  margin: 22px 0 7px;
+}
+
+.result-card h1 {
+  font-size: 30px;
+  margin: 0 0 5px;
+}
+
+.result-card p {
+  margin: 0;
+  opacity: .65;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+  align-content: start;
+}
+
+.photo {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #19191d;
+  aspect-ratio: 1;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floating {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid #3b3b42;
+  background: #151519;
+  color: #fff;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
