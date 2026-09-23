@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Our Vibe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <section id="cameraScreen" class="screen active">
+    <div class="top">
+      <span class="tiny">OUR VIBE</span>
+    </div>
+
+    <div class="camera-wrap">
+      <video id="camera" autoplay playsinline muted></video>
+      <div class="camera-overlay">
+        <span>look at the camera</span>
+      </div>
+    </div>
+
+    <button id="continueBtn" class="primary">
+      Find my song
+    </button>
+
+    <p id="cameraMsg" class="msg"></p>
+  </section>
+
+
+  <section id="resultScreen" class="screen">
+
+    <div class="top">
+      <span class="tiny">TODAY'S VIBE</span>
+    </div>
+
+    <div class="result-card">
+
+      <div id="vibeText" class="vibe">
+        Warm · Romantic
+      </div>
+
+      <div id="songArt" class="art"></div>
+
+      <p class="eyebrow">YOUR SONG</p>
+
+      <h1 id="songTitle">—</h1>
+
+      <p id="songArtist">—</p>
+
+      <button id="playBtn" class="primary">
+        Play on YouTube
+      </button>
+
+      <button id="againBtn" class="ghost">
+        Another moment
+      </button>
+
+    </div>
+
+    <p id="resultMsg" class="msg"></p>
+
+  </section>
+
+
+  <section id="photosScreen" class="screen">
+
+    <div class="top">
+      <span class="tiny">US</span>
+    </div>
+
+    <div id="photos" class="photos"></div>
+
+    <button id="backBtn" class="ghost">
+      Back
+    </button>
+
+  </section>
+
+
+  <button id="photosBtn" class="floating">
+    ♡
+  </button>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
